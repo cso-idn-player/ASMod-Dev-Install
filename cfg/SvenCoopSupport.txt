@@ -1,0 +1,20 @@
+"ASModSCSupport"
+{
+	"mswin"
+	{
+		"contextFunc" "0x10A0"
+		
+		"libVersionFunc" "0x8880"
+		"libOptionsFunc" "0x8890"
+		
+		"atomicIncFunc" "0x00008440"
+		"atomicDecFunc" "0x00008450"
+		
+		"allocFunc" "0x003133EB"
+		"freeFunc" "0x003133E0"
+		"arrayAllocFunc" "0x003127E2"
+		"arrayFreeFunc" "0x003140F0"
+		
+		"managerFunc" "0xB2350"
+	}
+}

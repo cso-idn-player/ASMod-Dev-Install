@@ -1,0 +1,18 @@
+"ASModConfig"
+{
+	"loader"
+	{
+		"forceLocalEnvironment" "0"
+		"svenCoopHack" "1"
+	}
+	
+	"game"
+	{
+		"svencoop"
+		{
+			"pluginFallbackPath" "scripts/plugins"
+			"header" "CustomEntityBaseClasses"
+			"header" "CustomEntityUtils"
+		}
+	}
+}

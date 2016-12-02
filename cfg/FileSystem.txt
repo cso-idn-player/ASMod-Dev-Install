@@ -1,0 +1,62 @@
+"ASModFileSystem"
+{
+	globalAccess
+	{
+		access READ
+		access WRITE
+	}
+
+	directories
+	{
+		rootDirectory
+		{
+			path .
+		}
+		
+		directory
+		{
+			path "./scripts"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+				
+		directory
+		{
+			path "./scripts/plugins"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./scripts/plugins/store"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+	}
+	
+	filters
+	{
+		filter
+		{
+			//Never allow access to cfgs in the main directory.
+			expression "^([^/]|\\.\\/)*\\.cfg$"
+			flag INVERT
+		}
+		
+		filter
+		{
+			//Never allow access to script source files.
+			expression ".*\\.as$"
+			flag INVERT
+		}
+		
+		filter
+		{
+			//Never allow access to the servers directory.
+			expression "(.*\\/)?servers\\/.*"
+			flag INVERT
+		}
+	}
+}

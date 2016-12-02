@@ -1,0 +1,8 @@
+"ASModPlugins"
+{
+	"plugin"
+	{
+		name Test
+		script "test"
+	}
+}

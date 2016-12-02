@@ -1,0 +1,26 @@
+"ASModModules"
+{
+	"moduleList"
+	{
+		//Load the interop module first so dependencies work out.
+		"module"
+		{
+			"path" "SCInterop/dlls/SCInterop"
+		}
+		
+		"module"
+		{
+			"path" "stub_module/dlls/stub_module"
+		}
+		
+		"module"
+		{
+			"path" "SQL/dlls/SQL"
+		}
+		
+		"module"
+		{
+			"path" "FileSystem/dlls/FileSystem"
+		}
+	}
+}
