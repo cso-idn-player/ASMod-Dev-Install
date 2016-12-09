@@ -17,4 +17,22 @@
 		
 		"managerFunc" "0xB2350"
 	}
+	
+	"linux"
+	{
+		"contextFunc" "0x005D6A64"
+		
+		"libVersionFunc" "0x0060DCD8"
+		"libOptionsFunc" "0x0060DCEA"
+		
+		"atomicIncFunc" "0x0057980C"
+		"atomicDecFunc" "0x0057983A"
+		
+		"allocFunc" "0x0016E5B0"
+		"freeFunc" "0x00175E60"
+		"arrayAllocFunc" "0x001745D0"
+		"arrayFreeFunc" "0x001789E0"
+		
+		"managerFunc" "0x001D1CAE"
+	}
 }
