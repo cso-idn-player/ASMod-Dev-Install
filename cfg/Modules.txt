@@ -1,3 +1,6 @@
+//Modules to load. Modules are loaded in the order that they are listed, dependencies should be handled by adding modules in dependency order.
+//Module paths begin in "ASMod/modules", and exclude the extension.
+
 "ASModModules"
 {
 	"moduleList"

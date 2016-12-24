@@ -1,23 +1,44 @@
+//This file defines the memory addresses for functions retrieved from Sven Co-op. These are required in order for Sven Co-op support to function.
+//All addresses must be updated when a new version of Sven Co-op is released.
+//All addresses are in hexadecimal, relative to the base address of the library. At runtime the addresses are added to the base address to get the actual address.
+
 "ASModSCSupport"
 {
+	//Windows addresses.
 	"mswin"
 	{
+		//asGetActiveContext
 		"contextFunc" "0x10A0"
 		
+		//asGetLibraryVersion
 		"libVersionFunc" "0x8880"
+		
+		//asGetLibraryOptions
 		"libOptionsFunc" "0x8890"
 		
+		//asAtomicInc
 		"atomicIncFunc" "0x00008440"
+		
+		//asAtomicDec
 		"atomicDecFunc" "0x00008450"
 		
+		//operator new
 		"allocFunc" "0x003133EB"
+		
+		//operator delete
 		"freeFunc" "0x003133E0"
+		
+		//operator new[]
 		"arrayAllocFunc" "0x003127E2"
+		
+		//operator delete[]
 		"arrayFreeFunc" "0x003140F0"
 		
+		//CASServerManager::GetInstance
 		"managerFunc" "0xB2350"
 	}
 	
+	//Linux addresses. See Windows version for descriptions.
 	"linux"
 	{
 		"contextFunc" "0x005D6A64"

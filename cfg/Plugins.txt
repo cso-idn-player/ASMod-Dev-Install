@@ -1,8 +1,14 @@
+//The list of plugins to load.
+//Plugins are Angelscript scripts.
+
 "ASModPlugins"
 {
 	"plugin"
 	{
+		//Name of the plugin.
 		name Test
+		
+		//Script to load. Can be a script in either "ASMod/scripts" or in the "pluginFallbackPath" directory for the current game, if provided in Config.txt.
 		script "test"
 	}
 }

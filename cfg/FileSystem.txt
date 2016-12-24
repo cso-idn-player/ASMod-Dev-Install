@@ -1,3 +1,5 @@
+//FileSystem configuration. Sets permissions for directories that scripts can access.
+
 "ASModFileSystem"
 {
 	globalAccess
@@ -148,6 +150,10 @@
 		}
 	}
 	
+	//These filters are applied to every filesystem call.
+	//By default, the filter must match (pass) to allow access. The INVERT flag inverts this behavior, requiring the filter to fail.
+	//All filters must allow access in order for access to be granted.
+	//Regular expressions should be escaped when necessary.
 	filters
 	{
 		filter

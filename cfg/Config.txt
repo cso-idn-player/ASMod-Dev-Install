@@ -1,16 +1,26 @@
+//ASMod main config file.
+
 "ASModConfig"
 {
+	//Loader configuration.
 	"loader"
 	{
+		//Forces the user of a local environment even if the game exports the Angelscript interface.
 		"forceLocalEnvironment" "0"
+		
+		//Enable the Sven Co-op hack. ASMod attempts to locate Sven Co-op's Angelscript engine. If this fails, it will likely crash the game.
 		"svenCoopHack" "1"
 	}
 	
+	//Game specific configurations. Game name is the mod directory name.
 	"game"
 	{
 		"svencoop"
 		{
+			//Fall back to looking for plugin scripts in this directory.
 			"pluginFallbackPath" "scripts/plugins"
+			//Headers to include for every plugin. Needed to make plugins work when using custom entities.
+			//See the "ASMod/headers" directory.
 			"header" "CustomEntityBaseClasses"
 			"header" "CustomEntityUtils"
 		}
