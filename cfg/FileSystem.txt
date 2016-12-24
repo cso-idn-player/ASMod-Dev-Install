@@ -8,18 +8,23 @@
 
 	directories
 	{
+		//Set root directory permissions.
 		rootDirectory
 		{
 			path .
 		}
 		
+		//Allow reading from scripts/ and any subdirectories (config files, etc).
+		//Allow write access to scripts/<module type>/temp for temporary files.
+		//Allow persistent write access to scripts/<module type>/store for persistent files.
 		directory
 		{
 			path "./scripts"
 			access READ
 			flag IMPLICIT_SUBDIRECTORIES
 		}
-				
+		
+		//Plugins
 		directory
 		{
 			path "./scripts/plugins"
@@ -32,6 +37,113 @@
 			path "./scripts/plugins/store"
 			access READ
 			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./scripts/plugins/temp"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+			flag TEMP
+		}
+		
+		//Map scripts
+		directory
+		{
+			path "./scripts/maps"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./scripts/maps/store"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./scripts/maps/temp"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+			flag TEMP
+		}
+		
+		//Allow reading from resource directories so config files can be read.
+		//Allow access to subdirectories as well. (node graphs, models in subdirs, etc)
+		directory
+		{
+			path "./maps"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./models"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./sound"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./sprites"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		//Allow access to the addons directory so Metamod data can be read, but only from the ASMod scripts/ directory.
+		directory
+		{
+			path "./addons"
+		}
+		
+		directory
+		{
+			path "./addons/ASMod"
+		}
+		
+		directory
+		{
+			path "./addons/ASMod/scripts"
+			access READ
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./addons/ASMod/scripts/store"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+		}
+		
+		directory
+		{
+			path "./addons/ASMod/scripts/temp"
+			access READ
+			access WRITE
+			flag IMPLICIT_SUBDIRECTORIES
+			flag TEMP
+		}
+		
+		//Separate directory for configurations if they want it.
+		directory
+		{
+			path "./addons/ASMod/configs"
+			access READ
 			flag IMPLICIT_SUBDIRECTORIES
 		}
 	}
