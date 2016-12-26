@@ -23,16 +23,16 @@
 		"atomicDecFunc" "0x00008450"
 		
 		//operator new
-		"allocFunc" "0x003133EB"
+		"allocFunc" "0x3135FB"
 		
 		//operator delete
-		"freeFunc" "0x003133E0"
+		"freeFunc" "0x3135F0"
 		
 		//operator new[]
-		"arrayAllocFunc" "0x003127E2"
+		"arrayAllocFunc" "0x003129F2"
 		
 		//operator delete[]
-		"arrayFreeFunc" "0x003140F0"
+		"arrayFreeFunc" "0x00314300"
 		
 		//CASServerManager::GetInstance
 		"managerFunc" "0xB2350"
@@ -41,19 +41,19 @@
 	//Linux addresses. See Windows version for descriptions.
 	"linux"
 	{
-		"contextFunc" "0x005D6A64"
-		
-		"libVersionFunc" "0x0060DCD8"
-		"libOptionsFunc" "0x0060DCEA"
-		
-		"atomicIncFunc" "0x0057980C"
-		"atomicDecFunc" "0x0057983A"
-		
-		"allocFunc" "0x0016E5B0"
-		"freeFunc" "0x00175E60"
-		"arrayAllocFunc" "0x001745D0"
-		"arrayFreeFunc" "0x001789E0"
-		
+		"contextFunc" "0x005D6BE2"
+
+		"libVersionFunc" "0x0060DE56"
+		"libOptionsFunc" "0x0060DE56"
+
+		"atomicIncFunc" "0x0057998A"
+		"atomicDecFunc" "0x005799B8"
+
+		"allocFunc" "0x00903120"
+		"freeFunc" "0x009032F8"
+		"arrayAllocFunc" "0x009032A4"
+		"arrayFreeFunc" "0x009033B0"
+
 		"managerFunc" "0x001D1CAE"
 	}
 }
