@@ -1,6 +1,22 @@
 //This file defines the memory addresses for functions retrieved from Sven Co-op. These are required in order for Sven Co-op support to function.
 //All addresses must be updated when a new version of Sven Co-op is released.
 //All addresses are in hexadecimal, relative to the base address of the library. At runtime the addresses are added to the base address to get the actual address.
+//
+//How to find addresses:
+//Using IDA, reverse engineer the libraries. Set base address to 0.
+//When in Hex view: Edit->Segments->Rebase program...->Set Image base Value to 0.
+//Windows:
+//Take the address of the function declaration.
+//Context can be found by looking up a use of the active context.
+//Version and Options return strings that you can look up in IDA.
+//asAtomicInc calls InterlockedIncrement
+//asAtomicDec calls InterlockedDecrement
+//Check Angelscript API registration functions to get to other functions. string uses new[] and delete[], reference types use new and delete.
+//new & delete are exported by name.
+//Manager function can be found by looking up references to the manager global. One of the references is the original GetInstance function.
+//
+//Linux:
+//All functions have their name exported. Look up functions by name.
 
 "ASModSCSupport"
 {
